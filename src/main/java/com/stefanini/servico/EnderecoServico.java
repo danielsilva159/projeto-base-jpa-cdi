@@ -1,6 +1,7 @@
 package com.stefanini.servico;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -38,13 +39,13 @@ public class EnderecoServico implements IGenericService<Endereco, Long> {
 		}
 
 		@Override
-		public List<Endereco> getList() {
+		public Optional<List<Endereco>> getList() {
 			// TODO Auto-generated method stub
 			return enderecoDao.getList();
 		}
 
 		@Override
-		public Endereco encontrar(Long id) {
+		public Optional<Endereco> encontrar(Long id) {
 			// TODO Auto-generated method stub
 			return enderecoDao.encontrar(id);
 		}

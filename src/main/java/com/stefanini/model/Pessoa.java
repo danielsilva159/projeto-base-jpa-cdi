@@ -49,6 +49,16 @@ public class Pessoa {
 		this.dataNascimento = dataNascimento;
 		this.situacao = situacao;
 	}
+	
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
@@ -93,8 +103,8 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Pessoa [getNome()=" + getNome() + ", getEmail()=" + getEmail() + ", getDataNascimento()="
-				+ getDataNascimento() + ", getSituacao()=" + getSituacao() + "]";
+		return "Pessoa Nome: " + getNome() + ", Email: " + getEmail() + ", Data de Nascimento: "
+				+ getDataNascimento() + ", Situacao: " + getSituacao();
 	}
 
 }

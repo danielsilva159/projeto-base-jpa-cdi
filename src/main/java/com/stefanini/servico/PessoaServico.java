@@ -1,6 +1,7 @@
 package com.stefanini.servico;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -36,14 +37,24 @@ public class PessoaServico implements IGenericService<Pessoa, Long>{
 	}
 
 	@Override
-	public List<Pessoa> getList() {
+	public Optional<List<Pessoa>> getList() {
 		// TODO Auto-generated method stub
 		return pessoaDao.getList();
 	}
+	//@Override
+	public Optional<List<Pessoa>> getList(Boolean situacao) {
+		// TODO Auto-generated method stub
+		return pessoaDao.getList(situacao);
+	}
+
 
 	@Override
-	public Pessoa encontrar(Long id) {
-		// TODO Auto-generated method stub
+	public Optional<Pessoa> encontrar(Long id) {
+		try {
+			System.out.println("Entrou aqui");
+		} catch (Exception e) {
+			e.getMessage();
+		}
 		return pessoaDao.encontrar(id);
 	}
 
